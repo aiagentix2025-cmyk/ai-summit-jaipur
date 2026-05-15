@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AGENTiX | AI-Powered Operating Systems</title>
+    <meta name="description" content="AGENTiX turns business bottlenecks into AI-powered operating systems through custom SaaS, AI agents, automation, dashboards, and continuous optimization." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=DM+Serif+Display&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Success Modal -->
+    <div class="success-overlay" id="success-overlay">
+      <div class="success-modal">
+        <span class="success-icon">🎉</span>
+        <h3>Bottleneck Submitted!</h3>
+        <p>Our team will review your submission and reach out within 24 hours. A confirmation email has been sent to your inbox.</p>
+        <button class="btn btn-primary" onclick="document.getElementById('success-overlay').classList.remove('active')">Got it</button>
+      </div>
+    </div>
+
+    <!-- Sticky CTA bar -->
+    <div class="sticky-cta" id="sticky-cta">
+      <div class="sticky-cta-text">AGENTiX <span>AI-Powered Operating Systems</span></div>
+      <a class="btn btn-primary" href="#contact" style="height:40px;font-size:13px;border-radius:100px;">Book a Discovery Call →</a>
+    </div>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="AGENTiX home"><img src="logo.png" alt="AGENTiX" /></a>
+      <button id="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#method">Method</a>
+        <a href="#solutions">Solutions</a>
+        <a href="#work">Case Studies</a>
+        <a href="#pricing">Pricing</a>
+      </nav>
+      <a class="header-cta" href="#contact">Book a Call</a>
+    </header>
+
+    <main id="top">
+
+      <!-- ═══════════════════════════════════════════════
+           HERO — Cinematic, full-width, centered
+           ═══════════════════════════════════════════════ -->
+      <section class="hero" id="hero">
+        <div class="hero-bg">
+          <img src="hero-bg.png" alt="" aria-hidden="true" />
+          <div class="hero-overlay"></div>
+        </div>
+
+        <div class="hero-content">
+          <p class="hero-tag anim-up d1">Enterprise AI Transformation Partner · India</p>
+          <h1 class="anim-up d2">
+            Turn business<br/>bottlenecks into<br/>
+            <span class="hero-accent">AI-powered</span> systems
+          </h1>
+          <p class="hero-sub anim-up d3">We study your workflow, find what's broken, build the technology,<br/>and deploy AI agents as a new execution layer.</p>
+          <div class="hero-actions anim-up d4">
+            <a class="btn btn-hero" href="#contact">Book a Discovery Call</a>
+            <a class="btn btn-ghost" href="#method">See How It Works ↓</a>
+          </div>
+        </div>
+
+        <div class="hero-stats anim-up d5">
+          <div class="hero-stat"><strong data-target="8" data-suffix="+">0</strong><span>Clients Served</span></div>
+          <div class="hero-stat"><strong data-target="300" data-suffix="ms">0</strong><span>Voice Latency</span></div>
+          <div class="hero-stat"><strong data-target="64" data-suffix="%">0</strong><span>Less Manual Work</span></div>
+          <div class="hero-stat"><strong data-target="38" data-suffix="%">0</strong><span>More Leads</span></div>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════
+           MARQUEE — Trust strip
+           ═══════════════════════════════════════════════ -->
+      <div class="marquee-strip">
+        <div class="marquee-track">
+          <span>Problem First</span><span>·</span>
+          <span>AI Second</span><span>·</span>
+          <span>Custom SaaS</span><span>·</span>
+          <span>Voice AI</span><span>·</span>
+          <span>AI Agents</span><span>·</span>
+          <span>Dashboards</span><span>·</span>
+          <span>CRM Systems</span><span>·</span>
+          <span>Content Engines</span><span>·</span>
+          <span>Lead Funnels</span><span>·</span>
+          <span>Problem First</span><span>·</span>
+          <span>AI Second</span><span>·</span>
+          <span>Custom SaaS</span><span>·</span>
+          <span>Voice AI</span><span>·</span>
+          <span>AI Agents</span><span>·</span>
+          <span>Dashboards</span><span>·</span>
+          <span>CRM Systems</span><span>·</span>
+          <span>Content Engines</span><span>·</span>
+          <span>Lead Funnels</span><span>·</span>
+        </div>
+      </div>
+
+      <!-- ═══════════════════════════════════════════════
+           ARCHITECTURE — Full showcase section
+           ═══════════════════════════════════════════════ -->
+      <section class="section arch-section" id="architecture">
+        <div class="section-heading center">
+          <p class="eyebrow">How it works</p>
+          <h2>From Business Problem to<br/>AI Operating System</h2>
+        </div>
+        <div class="architecture-card">
+          <div class="signal-field" aria-hidden="true"><span class="signal s1"></span><span class="signal s2"></span><span class="signal s3"></span></div>
+          <div class="arch-header">
+            <div><p>Live architecture map</p><strong>Problem → System → Optimization</strong></div>
+            <span class="live-dot">Active</span>
+          </div>
+          <div class="arch-flow">
+            <div class="arch-node"><span>01</span><strong>Business Problem</strong><small>Scattered leads, manual reports, slow follow-up</small></div>
+            <div class="arch-line"></div>
+            <div class="arch-node"><span>02</span><strong>Bottleneck Mapping</strong><small>Workflow, tools, team, data, constraints</small></div>
+            <div class="agent-core">
+              <span class="orbit o1"></span><span class="orbit o2"></span><span class="orbit o3"></span>
+              <div><small>03</small><strong>AI Execution Core</strong><em>Agents coordinating sales, content, voice, CRM, and reports</em></div>
+            </div>
+            <div class="arch-line"></div>
+            <div class="arch-node output"><span>04</span><strong>Operating System</strong><small>SaaS, dashboards, automations, feedback loop</small></div>
+          </div>
+          <div class="dashboard-strip">
+            <div><span>Lead flow</span><strong>+38%</strong></div>
+            <div><span>Response time</span><strong>&lt;300ms</strong></div>
+            <div><span>Manual work</span><strong>-64%</strong></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════
+           PROBLEMS
+           ═══════════════════════════════════════════════ -->
+      <section class="section" id="problems">
+        <div class="section-heading">
+          <p class="eyebrow">Problem first</p>
+          <h2>Every Industry Has Bottlenecks.<br/>We Find Them First.</h2>
+          <p>Before we talk about AI, we understand the business problem.</p>
+        </div>
+        <div class="problem-grid">
+          <article class="problem-card"><span>01</span><h3>Scattered Leads</h3><p>WhatsApp, ads, calls, inboxes — nothing works as one system.</p></article>
+          <article class="problem-card"><span>02</span><h3>Slow Sales Follow-Up</h3><p>Hot leads go cold because follow-up depends on manual effort.</p></article>
+          <article class="problem-card"><span>03</span><h3>Manual Reporting</h3><p>Teams spend hours on updates instead of acting on insight.</p></article>
+          <article class="problem-card"><span>04</span><h3>Disconnected Tools</h3><p>People copy data between platforms every single day.</p></article>
+          <article class="problem-card"><span>05</span><h3>Weak Brand Visibility</h3><p>No repeatable content engine means inconsistent output.</p></article>
+          <article class="problem-card"><span>06</span><h3>No Live Dashboard</h3><p>Founders can't see real-time performance across the business.</p></article>
+        </div>
+        <p class="section-line">We don't ask "Which AI tool?" — We ask "Where is the business leaking time, money, and leads?"</p>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════
+           CAPABILITIES
+           ═══════════════════════════════════════════════ -->
+      <section class="section bg-alt">
+        <div class="container split-layout">
+          <div class="section-heading compact">
+            <p class="eyebrow">What AGENTiX does</p>
+            <h2>The Technology Layer Your Business Needs</h2>
+          </div>
+          <div class="capability-grid">
+            <article><span class="icon-mark">D</span><h3>Diagnose the Bottleneck</h3><p>Audit your process, tools, team workflow, and business goals.</p></article>
+            <article><span class="icon-mark">S</span><h3>Design the System</h3><p>Architecture for automation, SaaS, dashboards, AI agents, and CRM.</p></article>
+            <article><span class="icon-mark">B</span><h3>Build and Connect</h3><p>Build software, connect APIs, automate actions, deploy the AI layer.</p></article>
+            <article><span class="icon-mark">O</span><h3>Maintain and Optimize</h3><p>Monitor, fix, improve, and scale the system as you grow.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════
+           METHOD (dark)
+           ═══════════════════════════════════════════════ -->
+      <section class="section dark-section" id="method">
+        <div class="section-heading">
+          <p class="eyebrow">The method</p>
+          <h2>From Problem to<br/>AI-Powered Execution</h2>
+        </div>
+        <div class="timeline">
+          <article><span>01</span><h3>Discovery Call</h3><p>Goals, bottlenecks, budget, tools.</p></article>
+          <article><span>02</span><h3>Bottleneck Map</h3><p>What slows sales, ops, or growth.</p></article>
+          <article><span>03</span><h3>AI Architecture</h3><p>SaaS, agents, APIs, dashboards.</p></article>
+          <article><span>04</span><h3>Custom Build</h3><p>Frontend, backend, DB, AI flows.</p></article>
+          <article><span>05</span><h3>Integration</h3><p>WhatsApp, CRM, email, payments.</p></article>
+          <article><span>06</span><h3>Deployment</h3><p>Test, train the team, go live.</p></article>
+          <article><span>07</span><h3>Optimization</h3><p>Monitor and improve continuously.</p></article>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════
+           INDUSTRIES
+           ═══════════════════════════════════════════════ -->
+      <section class="section">
+        <div class="section-heading center">
+          <p class="eyebrow">Industry-agnostic</p>
+          <h2>Any Industry. Any Bottleneck.<br/>One Partner.</h2>
+        </div>
+        <div class="industry-grid">
+          <article><h3>Healthcare</h3><p>Patient inquiries, appointments, hospital sales, ecosystem automation.</p></article>
+          <article><h3>Fintech</h3><p>Founder trust, LinkedIn automation, brand content, compliant workflows.</p></article>
+          <article><h3>Fitness</h3><p>Lead conversion, member follow-up, digital marketing, website systems.</p></article>
+          <article><h3>D2C / Retail</h3><p>Product shoots, CRM, sales automation, and content engines.</p></article>
+          <article><h3>Media / VFX</h3><p>AI video, storyboards, branded edits, campaign content.</p></article>
+          <article><h3>Enterprise Ops</h3><p>CRM, ERP, LMS, inventory, payroll, dashboards, internal SaaS.</p></article>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════
+           SOLUTIONS
+           ═══════════════════════════════════════════════ -->
+      <section class="section bg-alt" id="solutions">
+        <div class="section-heading">
+          <p class="eyebrow">360° architecture</p>
+          <h2>AI Systems Built Around<br/>Real Bottlenecks</h2>
+        </div>
+        <div class="solution-grid">
+          <article><h3>AI Sales Agents</h3><p>Voice, WhatsApp, SMS, AI calling, lead qualification, booking.</p></article>
+          <article><h3>Voice AI</h3><p>Sub-300ms latency agents for sales and customer support.</p></article>
+          <article><h3>Content Engines</h3><p>Voice cloning, video cloning, LinkedIn, reels, scripts.</p></article>
+          <article><h3>VFX Production</h3><p>Product shoots, model photos, b-roll, campaign edits.</p></article>
+          <article><h3>Lead Funnels</h3><p>Scraping, scoring, nurturing, multi-channel follow-ups.</p></article>
+          <article><h3>Custom SaaS</h3><p>Dashboards, portals, admin panels, analytics, APIs.</p></article>
+          <article><h3>CRM / ERP / LMS</h3><p>Centralized ops for teams, customers, inventory, sales.</p></article>
+          <article><h3>Finance Automation</h3><p>Invoicing, payroll, approvals, expense tracking.</p></article>
+          <article><h3>Business Intelligence</h3><p>Live visibility into sales, ops, marketing, and growth.</p></article>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════
+           CASE STUDIES
+           ═══════════════════════════════════════════════ -->
+      <section class="section" id="work">
+        <div class="section-heading">
+          <p class="eyebrow">Client work</p>
+          <h2>Built Across Healthcare,<br/>Fintech, Fitness & Automation</h2>
+        </div>
+        <div class="case-grid">
+          <article class="case-card"><div class="logo-box">INRPlus</div><p class="case-industry">Fintech</p><h3>Brand + LinkedIn automation</h3><p><strong>Problem:</strong> Needed founder-led trust.</p><p><strong>Output:</strong> Voice/video cloning + LinkedIn workflows.</p></article>
+          <article class="case-card"><div class="logo-box">DLC</div><p class="case-industry">Hospital</p><h3>AI sales automation</h3><p><strong>Problem:</strong> Manual inquiry handling.</p><p><strong>Output:</strong> AI sales workflow + response automation.</p></article>
+          <article class="case-card"><div class="logo-box">Kailash</div><p class="case-industry">Healthcare</p><h3>AI ecosystem build</h3><p><strong>Problem:</strong> Sales + operational bottlenecks.</p><p><strong>Output:</strong> Connected AI architecture.</p></article>
+          <article class="case-card"><div class="logo-box">Fitness First</div><p class="case-industry">Fitness</p><h3>Sales + content + website</h3><p><strong>Problem:</strong> Weak lead handling.</p><p><strong>Output:</strong> AI agents, content engine, campaigns.</p></article>
+          <article class="case-card"><div class="logo-box">Umang</div><p class="case-industry">Healthcare</p><h3>Inquiry automation</h3><p><strong>Problem:</strong> Manual patient handling.</p><p><strong>Output:</strong> Patient workflows, content, marketing.</p></article>
+          <article class="case-card"><div class="logo-box">IndiaGrain</div><p class="case-industry">D2C / Retail</p><h3>CRM + sales automation</h3><p><strong>Problem:</strong> Disconnected management.</p><p><strong>Output:</strong> CRM, content, AI sales agents.</p></article>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════
+           PRICING
+           ═══════════════════════════════════════════════ -->
+      <section class="section bg-alt" id="pricing">
+        <div class="section-heading center">
+          <p class="eyebrow">Custom pricing</p>
+          <h2>Pricing Depends on<br/>What You Need</h2>
+          <p>Every bottleneck requires a different architecture.</p>
+        </div>
+        <div class="pricing-grid">
+          <article><h3>Custom Tool Cost</h3><p>Software complexity, dashboard, CRM, SaaS, AI agent, or content engine.</p></article>
+          <article><h3>API + Infrastructure</h3><p>AI models, voice, messaging, hosting, databases, integrations.</p></article>
+          <article><h3>Maintenance</h3><p>Monitoring, support, improvements, scaling, workflow optimization.</p></article>
+        </div>
+        <div style="text-align:center;margin-top:32px;">
+          <a class="btn btn-primary" href="#contact">Get Your Build Estimate →</a>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════
+           COMPARE
+           ═══════════════════════════════════════════════ -->
+      <section class="section">
+        <div class="section-heading center">
+          <p class="eyebrow">Why AGENTiX</p>
+          <h2>Not AI Experiments.<br/>Systems That Run.</h2>
+        </div>
+        <div class="compare-grid">
+          <article>
+            <h3>Typical AI Vendor</h3>
+            <ul><li>Starts with tools</li><li>Sells chatbots or isolated automation</li><li>Ignores existing workflows</li><li>Creates disconnected systems</li><li>Stops after delivery</li></ul>
+          </article>
+          <article class="agentix-way">
+            <h3>AGENTiX</h3>
+            <ul><li>Starts with bottlenecks</li><li>Builds around your process</li><li>Connects tools, APIs, and teams</li><li>Creates custom AI execution layers</li><li>Maintains and optimizes continuously</li></ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════
+           CONTACT (dark)
+           ═══════════════════════════════════════════════ -->
+      <section class="section dark-section contact-section" id="contact">
+        <div class="contact-layout">
+          <div class="contact-copy">
+            <p class="eyebrow">Bring us one bottleneck</p>
+            <h2>Tell Us What's Slowing<br/>Your Business Down</h2>
+            <p>We'll study the problem, map the workflow, and show you the AI-powered system that removes it.</p>
+            <div class="contact-proof">
+              <strong>✦ Problem first.</strong>
+              <strong>✦ AI second.</strong>
+              <strong>✦ Execution always.</strong>
+            </div>
+          </div>
+          <form class="contact-form" aria-label="Submit your business bottleneck" data-sheet-form>
+            <label>Name <input type="text" name="Name" placeholder="Your name" required /></label>
+            <label>Company <input type="text" name="Company Name" placeholder="Company name" required /></label>
+            <label>Industry <input type="text" name="Industry" placeholder="Healthcare, fintech..." /></label>
+            <label>Phone <input type="tel" name="Phone Number" placeholder="+91" /></label>
+            <label>Email <input type="email" name="Email" placeholder="you@company.com" required /></label>
+            <label>Budget <input type="text" name="Budget Range" placeholder="Approximate range" /></label>
+            <label class="full">Current Tools <input type="text" name="Current Tools You Use" placeholder="CRM, WhatsApp, sheets, ads..." /></label>
+            <label class="full">What bottleneck do you want to solve? <textarea name="What bottleneck do you want to solve?" placeholder="Describe the workflow delay, sales issue, or manual process." required></textarea></label>
+            <label class="full">Timeline <input type="text" name="Preferred Timeline" placeholder="ASAP, 30 days, this quarter..." /></label>
+            <button class="btn btn-primary full" type="submit">Submit Bottleneck →</button>
+            <p class="form-note">We respond within 24 hours.</p>
+          </form>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════
+           FINAL CTA
+           ═══════════════════════════════════════════════ -->
+      <section class="final-cta">
+        <img src="logo.png" alt="AGENTiX" />
+        <h2>Business Problems →<br/>Working AI Systems</h2>
+        <p class="final-tagline">Problem first. AI second. Execution always.</p>
+        <a class="btn btn-primary" href="#contact">Book a Discovery Call →</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div><strong>AGENTiX</strong><span>Enterprise Transformation Partner · India</span></div>
+      <nav aria-label="Footer navigation">
+        <a href="#solutions">Solutions</a>
+        <a href="#work">Case Studies</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
