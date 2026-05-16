@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=DM+Serif+Display&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=3" />
+    <link rel="stylesheet" href="styles.css?v=4" />
   </head>
   <body>
     <!-- Success Modal -->
@@ -45,16 +45,13 @@
            HERO — Cinematic, full-width, centered
            ═══════════════════════════════════════════════ -->
       <section class="hero" id="hero">
-        <div class="hero-bg">
-          <img src="hero-bg.png" alt="" aria-hidden="true" />
-          <div class="hero-overlay"></div>
-        </div>
+        <canvas id="particle-canvas" aria-hidden="true"></canvas>
 
         <div class="hero-content">
           <p class="hero-tag anim-up d1">Enterprise AI Transformation Partner · India</p>
           <h1 class="anim-up d2">
-            Turn business<br/>bottlenecks into<br/>
-            <span class="hero-accent">AI-powered</span> systems
+            Turn business bottlenecks<br/>into your
+            <span class="hero-accent"><span class="hero-typewriter"></span></span>
           </h1>
           <p class="hero-sub anim-up d3">We study your workflow, find what's broken, build the technology,<br/>and deploy AI agents as a new execution layer.</p>
           <div class="hero-actions anim-up d4">
@@ -330,5 +327,88 @@
     </footer>
 
     <script src="script.js"></script>
+
+    <!-- Framer Motion: purposeful scroll + spring animations -->
+    <script type="module">
+      import { animate, inView, stagger } from "https://esm.sh/framer-motion@12/dom";
+
+      /* ── 1. CARD SCROLL REVEALS
+         Cards fade + rise in when they enter the viewport,
+         staggered so the eye naturally reads left-to-right. ── */
+      const cardSelectors = [
+        ".problem-card",
+        ".solution-grid article",
+        ".case-card",
+        ".industry-grid article",
+        ".capability-grid article",
+        ".pricing-grid article",
+        ".compare-grid article",
+        ".timeline article",
+        ".contact-proof strong",
+      ];
+
+      cardSelectors.forEach(selector => {
+        document.querySelectorAll(selector).forEach((el, i) => {
+          el.style.opacity = "0";
+          el.style.transform = "translateY(22px)";
+          inView(el, () => {
+            animate(el,
+              { opacity: 1, y: [22, 0] },
+              { duration: 0.55, delay: (i % 4) * 0.08, ease: [0.16, 1, 0.3, 1] }
+            );
+          }, { amount: 0.12 });
+        });
+      });
+
+      /* ── 2. SECTION HEADING REVEALS
+         Each section heading slides in once — draws the reader
+         into the section before the cards appear. ── */
+      document.querySelectorAll(".section-heading").forEach(el => {
+        el.style.opacity = "0";
+        el.style.transform = "translateY(18px)";
+        inView(el, () => {
+          animate(el, { opacity: 1, y: [18, 0] }, { duration: 0.65, ease: [0.16, 1, 0.3, 1] });
+        }, { amount: 0.2 });
+      });
+
+      /* ── 3. ARCHITECTURE NODE SEQUENCE
+         Each node in the architecture card animates in order,
+         showing the business→AI→output flow visually. ── */
+      inView(".architecture-card", () => {
+        const nodes = document.querySelectorAll(".arch-node, .agent-core, .dashboard-strip div");
+        nodes.forEach(n => { n.style.opacity = "0"; n.style.transform = "translateY(16px)"; });
+        animate(nodes,
+          { opacity: 1, y: [16, 0] },
+          { delay: stagger(0.14), duration: 0.52, ease: [0.16, 1, 0.3, 1] }
+        );
+      }, { amount: 0.25 });
+
+      /* ── 4. SPRING HOVER ON CARDS
+         Real spring physics on hover — settles naturally,
+         confirms to the user that cards are interactive. ── */
+      const springCards = document.querySelectorAll(
+        ".problem-card, .solution-grid article, .case-card, .capability-grid article, .industry-grid article, .pricing-grid article"
+      );
+      springCards.forEach(card => {
+        card.addEventListener("mouseenter", () =>
+          animate(card, { y: -5 }, { type: "spring", stiffness: 340, damping: 22 })
+        );
+        card.addEventListener("mouseleave", () =>
+          animate(card, { y: 0 }, { type: "spring", stiffness: 340, damping: 28 })
+        );
+      });
+
+      /* ── 5. SPRING BUTTONS
+         Primary buttons have a subtle scale spring on hover —
+         signals clickability without being distracting. ── */
+      document.querySelectorAll(".btn-primary, .btn-hero, .header-cta").forEach(btn => {
+        btn.addEventListener("mouseenter", () =>
+          animate(btn, { scale: 1.04 }, { type: "spring", stiffness: 400, damping: 20 })
+        );
+        btn.addEventListener("mouseleave", () =>
+          animate(btn, { scale: 1 }, { type: "spring", stiffness: 400, damping: 26 })
+        );
+      });
+    </script>
   </body>
 </html>

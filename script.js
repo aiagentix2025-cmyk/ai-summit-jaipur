@@ -129,22 +129,7 @@ form?.addEventListener("submit", async (e) => {
   tick();
 })();
 
-/* ── Scroll Reveal ───────────────────────────────────────────── */
-const revealEls = document.querySelectorAll(
-  ".problem-card,.capability-grid article,.timeline article," +
-  ".industry-grid article,.solution-grid article,.case-card," +
-  ".pricing-grid article,.compare-grid article,.stat-item," +
-  ".section-heading,.contact-proof strong"
-);
-revealEls.forEach((el, i) => {
-  el.classList.add("reveal");
-  el.style.transitionDelay = `${(i % 5) * 60}ms`;
-});
-const observer = new IntersectionObserver(
-  entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add("is-visible"); observer.unobserve(e.target); } }),
-  { threshold: 0.06 }
-);
-revealEls.forEach(el => observer.observe(el));
+/* Scroll reveal handled by Framer Motion module in index.html */
 
 /* ── Counter Animation ───────────────────────────────────────── */
 function animateCount(el, target, suffix, dur = 1600) {
@@ -163,14 +148,7 @@ const cObs = new IntersectionObserver(entries => {
 }, { threshold: 0.5 });
 document.querySelectorAll("[data-target]").forEach(el => cObs.observe(el));
 
-/* ── Magnetic Buttons ────────────────────────────────────────── */
-document.querySelectorAll(".btn-primary,.header-cta").forEach(btn => {
-  btn.addEventListener("mousemove", e => {
-    const r = btn.getBoundingClientRect();
-    btn.style.transform = `translate(${(e.clientX - r.left - r.width / 2) * 0.15}px,${(e.clientY - r.top - r.height / 2) * 0.15}px)`;
-  });
-  btn.addEventListener("mouseleave", () => { btn.style.transform = ""; });
-});
+/* Button spring hover handled by Framer Motion in index.html */
 
 /* ── Cursor Glow ─────────────────────────────────────────────── */
 (function () {
@@ -189,16 +167,7 @@ window.addEventListener("scroll", () => {
   stickyCta?.classList.toggle("visible", window.scrollY > 600);
 }, { passive: true });
 
-/* ── 3D Card Tilt ────────────────────────────────────────────── */
-document.querySelectorAll(".case-card,.problem-card,.solution-grid article").forEach(card => {
-  card.addEventListener("mousemove", e => {
-    const r = card.getBoundingClientRect();
-    const x = (e.clientX - r.left) / r.width - 0.5;
-    const y = (e.clientY - r.top) / r.height - 0.5;
-    card.style.transform = `perspective(600px) rotateY(${x * 6}deg) rotateX(${-y * 6}deg) translateY(-3px)`;
-  });
-  card.addEventListener("mouseleave", () => { card.style.transform = ""; });
-});
+/* Card hover handled by Framer Motion spring in index.html */
 
 /* ── Mobile nav ──────────────────────────────────────────────── */
 const navToggle = document.getElementById("nav-toggle");
